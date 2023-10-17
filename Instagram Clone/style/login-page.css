@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+.content {
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+}
+.left .instagram-in-app{
+    background-image: url(../img/instagram-phone-figures/home-phones.png);
+    background-repeat: no-repeat;
+    /* background-position: -100% 15%; */
+    width: 500px;
+    height: 600px;
+}
+.left .instagram-in-app img {
+    display: none;
+    position: relative;
+    top: 25px;
+    left: 31%;
+    width: 250px;
+    height: 545px;
+}
+.left .instagram-in-app img.visible{
+    display: block;
+    animation: opacityVisibility 2s ease 1;
+}
+@keyframes opacityVisibility {
+    from {
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+.right {
+    width: 400px;
+}
+.login-form {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 25px;
+    border: 1px solid rgba(0, 0, 0, .3);
+}
+
+.login-form img{
+    width: 200px;
+    margin: auto;
+}
+
+.login-form .input-box{
+    margin-top: 25px;
+    position: relative;
+}
+.input-box input{
+    /* display: block; */
+    background-color: rgba(219, 219, 219, 0.479);
+    width: 100%;
+    height: 30px;
+    margin: 0px auto 10px;
+    border: 1px solid rgb(124, 124, 124);
+    border-radius: 5px;
+    /* z-index: 1; */
+}
+.input-box input:focus{
+    outline: none;
+    border-top: 1px solid transparent;
+    transition: all .7s ease;
+}
+.input-box input:focus~label{
+    transform: translateY(-13px);
+    font-size: .75rem;
+    transition: all .7s ease;
+}
+.input-box label{
+    position: absolute;
+    top: 7px;
+    left: 5px;
+    color: rgb(65, 65, 65);
+    font-size: .8rem;
+    user-select: none;
+    cursor: text;
+}
+form .btn-Login{
+    width: 100%;
+    height: 30px;
+    margin: 20px 0px;
+    color: #fff;
+    background-color: #0080ff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+form .btn-Login:hover{
+    background-color: #0366c9;
+    transition: .7s ease;
+}
+form .btn-Login:active{
+    transform: scale(0.98);
+}
+.login-form span {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.login-fb{ 
+    display: flex;
+    justify-content: center;
+}
+.login-fb .login-w-facebook{
+    background-color: transparent;
+    border: none;
+    color: #004181;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.login-form small, a{
+    text-align: center;
+    color: #004181;
+    text-decoration: none;
+}
+.login-form small a:hover{
+    text-decoration: underline;
+}
+.sign-up-link{
+    margin-top: 20px;
+    text-align: center;
+    padding: 25px;
+    border: 1px solid rgba(0, 0, 0, .3);
+}
+.sign-up-link span a:hover{
+    text-decoration: underline;
+}
+.content-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.content-footer span{
+    margin: 10px 0;
+}
+.content-footer a img {
+    width: 90px;
+    height: 30px;
+}
+@media (max-width: 976px) {
+    .left{
+        display: none;
+    }
+    .right{
+        width: 350px;
+        margin-top: 5%;
+    }
+    .login-fb{ 
+        display: flex;
+        justify-content: center;
+    }
+    .login-fb .login-w-facebook{
+        font-size: .9rem;
+    }
+}
